@@ -17,6 +17,9 @@ func _fixed_process(delta):
 	speed_now.x = lerp(speed_now.x, speed.x, 0.1)
 	speed_now.y = lerp(speed_now.y, speed.y, 0.1)
 	target.set_pos(pos + speed_now * delta)
+	var bodies = get_colliding_bodies()
+	if bodies.size()>0:
+		print(bodies[0].get_name())
 	pass
 
 func _input(event):

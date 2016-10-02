@@ -5,12 +5,12 @@
 [ext_resource path="res://sprites/bird_blue_1.png" type="Texture" id=3]
 [ext_resource path="res://sprites/bird_blue_2.png" type="Texture" id=4]
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 2.532
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 
 animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ], "loop":true, "name":"default", "speed":6.0 } ]
 
@@ -18,7 +18,7 @@ animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 )
 
 transform/pos = Vector2( 56.6568, 45.589 )
 input/pickable = false
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 2.72304, 0, 0, 2.32776, 0.558771, 0.0773394 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -43,7 +43,7 @@ __meta__ = { "_edit_group_":true }
 
 [node name="anim_sprite" type="AnimatedSprite" parent="."]
 
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 animation = "default"
 frame = 2
 
@@ -51,7 +51,7 @@ frame = 2
 
 transform/pos = Vector2( 0.558771, 0.0773394 )
 transform/scale = Vector2( 2.72304, 2.32776 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
